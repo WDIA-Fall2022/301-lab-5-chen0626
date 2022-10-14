@@ -9,23 +9,25 @@ red = (255, 0, 0)
 white = (0, 0, 0)
 
 def gettemp():
-    temp_input = int(input("Enter temperature in Celsius:"))
+    temp_input = float(input("Enter temperature in Celsius:"))
     return (temp_input)
 
 def displayColorForTemperature():
     temp = gettemp()
+    t = round(temp)
     for i in range(64):
-        if -10 >= temp >= -40:
+        if -10 >= t >= -40:
             s.clear(darkblue)
-        if 0 >= temp >= -9:
+        if 0 >= t >= -9:
             s.clear(blue)
-        if 15 >= temp >= 1:
+        if 15 >= t >= 1:
             s.clear(lightgreen)
-        if 22 >= temp >= 16:
+        if 22 >= t >= 16:
             s.clear(green)
-        if temp > 22:
+        if t >= 23:
             s.clear(red)
-    print("Current temperature: %s C" % temp)
+
+    print("Current temperature: %s C" % t)
 
 displayColorForTemperature() #call temperature function
 
