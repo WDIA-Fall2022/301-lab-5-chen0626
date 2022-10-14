@@ -22,8 +22,7 @@ while True:
                     diceList.append(white)
             s.set_pixels(diceList)
         else:
-            print("Enter a validate integer between 1 and 64. Try again. ")
+            print("Try again. ")
 
     except ValueError:
         print("Warning! Enter an integer within the range. Try again. ")
-
